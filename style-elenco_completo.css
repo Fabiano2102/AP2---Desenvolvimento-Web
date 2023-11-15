@@ -1,46 +1,100 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    gap: .5em;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: flex-start; /* Alinha os elementos ao topo */
+}
 
-        body {
-            font-family: 'Oswald', sans-serif;
-            display: flex;
-            gap: .5em;
-            flex-wrap: wrap;
-            justify-content: center; /* Centraliza os elementos horizontalmente */
-            align-items: flex-start; /* Alinha os elementos ao topo */
-        }
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
 
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            width: 100%;
-        }
+.botoes-container {
+    text-align: center;
+    margin-top: 20px;
+}
 
-        .botoes-container {
-            text-align: center;
-            margin-top: 20px;
-        }
+.botoes-container button {
+    margin: 5px; /* Adicione um pequeno espaçamento entre os botões */
+    padding: 10px 20px; /* Ajuste o padding para aumentar o tamanho dos botões */
+    font-size: 16px; /* Ajuste o tamanho da fonte dos botões */
+    display: inline-block; /* Impede que os botões quebrem para uma nova linha */
+}
 
-        p {
-            text-align: center;
-            max-width: 400px;
-        }
+@media (min-width: 768px) {
+    .botoes-container {
+        display: flex;
+        justify-content: center; /* Centraliza os botões horizontalmente em telas maiores */
+    }
 
-        #jogadores-container{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin: 20px auto;
-            width: '15em';
-        }
+    .botoes-container button {
+        padding: 15px 30px; /* Ajuste o padding para aumentar o tamanho dos botões em telas maiores */
+    }
+}
 
-        article {
-            width: 20rem;
-            background-color: #777777;
-            text-align: center;
-            margin: auto;
-            margin-bottom: 11px;
-            border-radius: 10px;
-            min-width: 300px;
-        }
+p {
+    text-align: center;
+    max-width: 400px;
+}
+
+#jogadores-container {
+    display: grid;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px; /* Largura máxima da lista */
+    width: 100%;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+}
+
+@media (max-width: 768px) {
+    #jogadores-container {
+        grid-template-columns: 1fr; /* Uma coluna até 768px */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #jogadores-container {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas até 1024px */
+    }
+}
+
+@media (min-width: 1024px) {
+    #jogadores-container {
+        grid-template-columns: repeat(4, 1fr); /* Quatro colunas depois de 1024px */
+    }
+}
+
+/* Responsividade para a página de detalhes */
+#detalhes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 600px; /* Largura máxima da página de detalhes */
+    margin: 0 auto;
+}
+
+#detalhes-container img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+article {
+    width: 20rem;
+    background-color: #777777;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 11px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+
+
     
