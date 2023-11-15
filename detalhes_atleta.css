@@ -1,0 +1,24 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Cor do texto */
+    margin: 0;
+}
+
+#detalhes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#detalhes-container img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#detalhes-container p {
+    text-align: center;
+}
